@@ -1,0 +1,33 @@
+$font-name: 'Inter', sans-serif;
+$normal: 400;
+$regular: 500;
+$bold: 700;
+$semibold: 600;
+
+@mixin heading {
+	font-family: $font-name !important;
+	font-style: normal !important;
+	font-weight: $regular !important;
+	font-size: 20px !important;
+	line-height: 24px !important;
+	letter-spacing: -0.03em !important;
+	text-transform: capitalize !important;
+	text-align: left;
+}
+@mixin heading-big {
+	font-family: $font-name !important;
+	font-style: normal !important;
+	font-weight: $bold !important;
+	font-size: 36px !important;
+	line-height: 48px !important;
+	letter-spacing: 0.03em !important;
+}
+
+@mixin heading-medium {
+	font-family: $font-name !important;
+	font-style: normal !important;
+	font-weight: $semibold !important;
+	font-size: 30px !important;
+	line-height: 48px !important;
+	letter-spacing: 0.03em !important;
+}

@@ -1,0 +1,101 @@
+@import '../design/color-rules.scss';
+@import '../design/typography-rules.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+p {
+	margin: 0px;
+}
+
+body {
+	text-align: center;
+	font-family: 'Inter', sans-serif !important;
+}
+.heading {
+	@include heading;
+	margin: 12px 0px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: $selected-nav;
+}
+
+.layout {
+	display: flex;
+	.main-screen {
+		color: $background-color;
+		background: $background-color;
+		margin-left: 248px !important;
+		width: 100%;
+		height: 100%;
+		.more-button {
+			float: right;
+			margin-left: 16px !important;
+			background: $selected-nav;
+			margin-top: 48px !important;
+		}
+	}
+	.left-bar-wrapper {
+		.drawer-paper {
+			box-sizing: border-box;
+			background: $sidebar-color !important;
+			border-top-left-radius: 32px;
+			border-bottom-left-radius: 32px !important;
+			width: 250px;
+			.logo {
+				margin-top: 48px !important;
+				margin-bottom: 24px !important;
+				font-size: 36px !important;
+				line-height: 6px !important;
+				font-weight: 600;
+				letter-spacing: -0.03em !important;
+				color: $selected-nav;
+			}
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+
+			.left-menu-heading {
+				color: $text-color;
+				text-transform: uppercase;
+				margin-right: 48px;
+				margin-top: 20px !important;
+				font-size: 13px;
+				letter-spacing: 0.1em;
+				margin-bottom: 16px !important;
+			}
+			.selected-option {
+				padding: 12px 32px;
+				border-left: 2px solid $selected-nav;
+				color: $selected-nav;
+				svg path {
+					stroke: $selected-nav !important;
+					fill: $selected-nav !important;
+				}
+			}
+			.other-option {
+				padding: 12px 32px;
+				color: $text-color;
+				svg path {
+					stroke: $text-color !important;
+					fill: $text-color !important;
+				}
+			}
+		}
+	}
+}
